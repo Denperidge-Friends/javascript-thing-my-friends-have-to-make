@@ -1,0 +1,11 @@
+Link naar mijn codepen: https://codepen.io/denperidge/pen/RwLZJEm
+De code zelf staat in vraag-12.html & vraag-12.js
+
+Opgave:
+BONUS (niet erg als je dit niet kan) - Maak opnie ween pen aan;
+Maak net als in de vorige oefening een varaibele myName en probeer deze in je resultaat te krijgen. 
+(TIP: Document.write en console.log gaan niet werken - zoak al eens naar DOM).
+
+Note: ziende dat dit een bonus vraag is, upload deze gewoon als het je wel degelijk alleen (bijna) gelukt is/je het snapt
+
+Oh en als je een goede programmeerhabit/security wilt, zie ook vraag-12-innerhtml.html & js, en https://denperidge-friends.github.io/javascript-thing-my-friends-have-to-make/vraag-12-innerhtml
