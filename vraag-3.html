@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vraag 3</title>
+</head>
+<body>
+    <!-- 
+        Methode 1: onclick binnenin de html. Dit werkt. But don't.
+        - Je schrijft dan html en javascript heel awkwardly tussen elkaar in
+        - Onoverzichtelijk
+        - Security-wise is het ook wacky (Op platformen zoals Electron (waarmee Discord bc gecodeerd is) wordt deze methode gewoon *niet toegelaten*)
+    -->
+    <button onclick="ToonRandomGetal();">Methode 1</button>
+
+
+    <button id="methode2">Methode 2</button>
+
+    <button id="methode3">Methode 3</button>
+
+    <!-- Maak via een inline script tag -->
+    <script>
+        // Een variabele aan die een random getal toont aan je user als hij op een knop duwt
+        // en om de random variabele te genereren kan je gebruik man van Math.random()
+        var variabele = Math.random();
+        // PS: Math.random() is kinda wack
+        // Als je een goede random number generator wilt, kijk naar de laatste twee functies hier https://www.w3schools.com/js/js_random.asp
+        
+        function ToonRandomGetal() {
+            alert(variabele);
+        }
+
+        function AndereFunctieDieNietBelangrijkIsVoorDeOpdracht() {
+            alert("Yeet");
+        }
+
+        // -- gebruik voor de knop een onClick --
+        // Methode 2: onclick direct assignen, quick en dirty maar werkt
+        // Probleem met deze methode is dat je altijd overwrite: je kan niet meerdere onclicks tegelijk laten afgaan
+        document.getElementById("methode2").onclick = AndereFunctieDieNietBelangrijkIsVoorDeOpdracht;  // Deze wordt overwritten met de volgende
+        document.getElementById("methode2").onclick = ToonRandomGetal;
+
+
+        // Methode 3: onclick via eventlistener, de beste methode in vanilla/default javascript
+        document.getElementById("methode3").addEventListener("click", AndereFunctieDieNietBelangrijkIsVoorDeOpdracht);  // Deze zal firen
+        document.getElementById("methode3").addEventListener("click", ToonRandomGetal);  // Net zoals deze
+        // (Oh, je kan ze terug verwijderen met removeEventListener btw)
+
+
+    </script>
+</body>
+</html>
