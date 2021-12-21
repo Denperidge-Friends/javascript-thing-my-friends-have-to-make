@@ -21,14 +21,14 @@
 
         var variabele = Math.random();
 
-        // Hier definieer ik de functie binnenin de addEventListener. Dit kan je ook doen met onclick= etc
+        // Hier definieer ik de functie binnenin de addEventListener. Dit kan je ook doen met onclick =, net zoals met addEventListener etc
         // En als je de onclick functionaliteit nergens anders nodig hebt, is dit op zich een oke methode om het te doen!
-
-        // Oh, en je kan ook gewoon een id gebruiken ipv getElementsByTagName! Dit is gewoon zodat je het eens in actie ziet
-        // Onthou gewoon dat je meestal wel IDs wilt gebruiken. Deze code zou flippen als je nu een knop voor de huidige zet
+        
         document.getElementsByTagName("button")[0].addEventListener("click", function() {
             document.write(variabele);
         });
+        // Oh, en je kan ook gewoon een id gebruiken ipv getElementsByTagName! Dit is gewoon zodat je het eens in actie ziet
+        // Onthou gewoon dat je meestal wel IDs wilt gebruiken. Deze code zou flippen als je nu een knop voor de huidige zet
     </script>
 </body>
 </html>
