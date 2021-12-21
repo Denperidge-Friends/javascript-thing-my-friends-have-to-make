@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vraag 8</title>
+</head>
+<body>
+    <button>Press me</button>
+    <script>
+        /*
+        Hermaak je oefening van het vorige hoofdstuk waarbij je een alert met een random nummer geeft
+        zodanig dat je nu het random nummer gewoon in je browser krigjt. Gebruik nog steeds Math.random().
+        Dus nu niet via een alert naar de gebruiker sturen maar in browser weergeven met document.write
+
+        "... uitleg originele opdracht ... "
+        */ 
+
+        // Vorige hoofdstuk is in dit geval vraag-3, mind you!
+
+        var variabele = Math.random();
+
+        // Hier definieer ik de functie binnenin de addEventListener. Dit kan je ook doen met onclick= etc
+        // En als je de onclick functionaliteit nergens anders nodig hebt, is dit op zich een oke methode om het te doen!
+
+        // Oh, en je kan ook gewoon een id gebruiken ipv getElementsByTagName! Dit is gewoon zodat je het eens in actie ziet
+        // Onthou gewoon dat je meestal wel IDs wilt gebruiken. Deze code zou flippen als je nu een knop voor de huidige zet
+        document.getElementsByTagName("button")[0].addEventListener("click", function() {
+            document.write(variabele);
+        });
+    </script>
+</body>
+</html>
